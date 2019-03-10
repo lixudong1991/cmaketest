@@ -1,4 +1,4 @@
-# first we add the executable that generates the table
+# 指定生成执行文件
 add_executable(MakeTable MakeTable.cpp)
  
 # add the command to generate the source code
@@ -12,7 +12,7 @@ add_custom_command (
 # include files
 include_directories( ${CMAKE_CURRENT_BINARY_DIR} )
  
-# add the main library
+# 指定生成库文件
 add_library(MathFunctions mysqrt.cpp ${CMAKE_CURRENT_BINARY_DIR}/Table.h  )
 
 install (TARGETS MathFunctions DESTINATION bin)
